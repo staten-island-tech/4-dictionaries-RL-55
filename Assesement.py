@@ -13,11 +13,12 @@ def englishorfrench():
         print("English")
 
 def occupied():
+    w=int(input("Parking spaces "))
     x=input("Write . for empty C for occupied: ")
     y=input("Write . for empty C for occupied: ")
     z=0
-    for i in x:
-        if x==y and i=="C":
+    for i in w:
+        if x[i]==y[i]=="C":
             z=z+1
     print(f"Occupied space for both days: {z}")
 occupied()
