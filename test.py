@@ -16,45 +16,26 @@ item3={
     "effect":"7 DF",
     "desciption":"It has seen some wear. It has abs drawn on it."
     }
-SnowdinShop=(item1,item2,item3,"Exit")
+SnowdinShop=(item1,item2,item3)
 def shop():
     cart=[]
     x=0
     print("Hello, traveller. How can I help you?")
     while not x==1:
-        for i in range(3):
-            print(SnowdinShop[i]["name"])
+        for a in range(3):
+            print(SnowdinShop[a]["name"])
         y=input("What would you like to buy? ")
-        if y=="Bisicle":
-            for h in item1:
-                print(SnowdinShop[0][h])
-            z=input("Are you sure? ")
-            if z=="Yes":
-                print("Thanks for your purchase.")
-                cart.append(item1["name"])
-            else:
-                print("Just looking?")
-        elif y=="Cinnamon Bunny":    
-                    for h in item1:
-                print(SnowdinShop[0][h])
-            z=input("Are you sure? ")
-            if z=="Yes":
-                print("Thanks for your purchase.")
-                cart.append(item1["name"])
-            else:
-                print("Just looking?")            
-        elif y=="Manly Bandanna":
-                        for h in item1:
-                print(SnowdinShop[0][h])
-            z=input("Are you sure? ")
-            if z=="Yes":
-                print("Thanks for your purchase.")
-                cart.append(item1["name"])
-            else:
-                print("Just looking?")
-        elif y=="Exit":
-            print("Bye now! Come again sometime!")
-            print(f"You bought{cart}")
+        for b in range(3):
+            if y==SnowdinShop[b]["name"]:
+                for c in item1:
+                    print(SnowdinShop[b][c])
+                y=input("Are you sure? ")
+                if y=="Yes" or y=="yes":
+                    print("Thanks for your purchase")
+                    cart.append(SnowdinShop[b]["name"])
+                elif y=="No" or y=="no":
+                    print("Take your time.")
+        if y=="exit" or y=="Exit":
+            print(f"You purchased {cart}")
             x=1
-
 shop()
