@@ -24,18 +24,21 @@ def shop():
     while not x==1:
         for a in range(3):
             print(SnowdinShop[a]["name"])
-        y=input("What would you like to buy? ")
+        y=input("What would you like to buy: ")
         for b in range(3):
             if y==SnowdinShop[b]["name"]:
                 for c in item1:
                     print(SnowdinShop[b][c])
-                y=input("Are you sure? ")
+                y=input("Are you sure? Yes or No ")
                 if y=="Yes" or y=="yes":
                     print("Thanks for your purchase")
                     cart.append(SnowdinShop[b]["name"])
-                elif y=="No" or y=="no":
-                    print("Take your time.")
-        if y=="exit" or y=="Exit":
-            print(f"You purchased {cart}")
-            x=1
+                    y=input("Buy or Exit ")
+                    if y=="Buy" or y=="buy":
+                        x=0
+                    elif y=="Exit" or y=="exit":
+                        x=1
+                        print(f"You purchased {cart}")
+            else:
+                print("")
 shop()
