@@ -17,7 +17,7 @@ def occupied():
     x=input("Write . for empty C for occupied: ")
     y=input("Write . for empty C for occupied: ")
     z=0
-    for i in w:
+    for i in range(w):
         if x[i]==y[i]=="C":
             z=z+1
     print(f"Occupied space for both days: {z}")
