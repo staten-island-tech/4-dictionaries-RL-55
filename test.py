@@ -17,7 +17,6 @@ SnowdinShop={
 }
 def shop():
     cart=[]
-    off=0
     G=0
     print("Hello, traveller. How can I help you?")
     while not off==1:
@@ -33,10 +32,10 @@ def shop():
                     print("Thanks for your purchase")
                     cart.append(SnowdinShop[b]["name"])
                     G+=SnowdinShop[b]["price"]
-                    y=input("Buy or Exit: ")
-                    if y=="Buy" or y=="buy":
+                    off=input("Buy or Exit: ")
+                    if off=="Buy" or y=="buy":
                         off=0
-                    elif y=="Exit" or y=="exit":
+                    elif off=="Exit" or y=="exit":
                         off=1
                         print(f"You purchased {cart}",f"Price: {G}G")
 shop()
