@@ -17,6 +17,7 @@ SnowdinShop={
 }
 def shop():
     cart=[]
+    off=0
     G=0
     print("Hello, traveller. How can I help you?")
     while not off==1:
